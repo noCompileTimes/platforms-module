@@ -6,6 +6,8 @@ namespace backends::glfw
     {
         glfwInit();
 
+        glfwWindowHint(GLFW_SAMPLES, configuration.samples);
+
         _handle = glfwCreateWindow(configuration.width, configuration.height, configuration.name.data(), nullptr, nullptr);
 
         glfwMakeContextCurrent(_handle);
