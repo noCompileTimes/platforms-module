@@ -9,9 +9,9 @@ namespace core
     class WindowManager
     {
     public:
-        auto init(const std::unique_ptr<base::WindowFactory>& factory, const window::configuration& configuration) -> void;
+        auto  init(const std::unique_ptr<base::WindowFactory>& factory, const window::configuration& configuration) -> void;
+        auto  update() const -> void;
         auto release() const -> void;
-        auto update()  const -> void;
 
         auto window() const -> base::Window*;
         auto window_events() const -> base::WindowEvents*;
