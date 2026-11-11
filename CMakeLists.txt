@@ -1,4 +1,4 @@
-project(platforms-module)
+project(platforms-module LANGUAGES CXX)
 
 add_library(${PROJECT_NAME})
 
