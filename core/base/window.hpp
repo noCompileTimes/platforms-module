@@ -12,6 +12,8 @@ namespace core::base
         virtual auto create(const window::configuration& configuration) -> void = 0;
         virtual auto destroy() -> void = 0;
 
+        virtual auto swap_buffers() -> void = 0;
+
         virtual auto handle() -> std::any = 0;
 
         virtual ~Window() = default;

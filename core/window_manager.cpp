@@ -1,7 +1,5 @@
 #include "window_manager.hpp"
 
-#include "GLFW/glfw3.h"
-
 namespace core
 {
     auto WindowManager::init(const std::unique_ptr<base::WindowFactory>& factory, const window::configuration& configuration) -> void
@@ -20,7 +18,7 @@ namespace core
 
     auto WindowManager::update() const -> void
     {
-        glfwSwapBuffers(std::any_cast<GLFWwindow*>(_window->handle()));
+        _window->swap_buffers();
 
         _window_events->update();
     }

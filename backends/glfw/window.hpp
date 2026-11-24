@@ -12,6 +12,8 @@ namespace backends::glfw
         auto create(const core::window::configuration& configuration) -> void override;
         auto destroy() -> void override;
 
+        auto swap_buffers() -> void override;
+
         auto handle() -> std::any override;
 
     private:

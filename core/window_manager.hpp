@@ -13,7 +13,7 @@ namespace core
         auto  update() const -> void;
         auto release() const -> void;
 
-        auto window() const -> base::Window*;
+        auto window()        const -> base::Window*;
         auto window_events() const -> base::WindowEvents*;
 
     private:

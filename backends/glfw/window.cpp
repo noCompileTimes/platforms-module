@@ -20,6 +20,11 @@ namespace backends::glfw
         glfwTerminate();
     }
 
+    auto Window::swap_buffers() -> void
+    {
+        glfwSwapBuffers(_handle);
+    }
+
     auto Window::handle() -> std::any
     {
         return _handle;

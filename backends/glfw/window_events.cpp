@@ -10,7 +10,7 @@ namespace backends::glfw
     {
         const auto handle = std::any_cast<GLFWwindow*>(window->handle());
 
-        glfwSetWindowUserPointer(std::any_cast<GLFWwindow*>(handle), this);
+          glfwSetWindowUserPointer(handle, this);
 
         glfwSetWindowCloseCallback(handle, [](GLFWwindow* window_handle)
         {
