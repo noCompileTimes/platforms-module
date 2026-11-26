@@ -6,6 +6,12 @@ namespace backends::glfw
     {
         glfwInit();
 
+        if (configuration.debug)
+        {
+            // TODO check if is still 100% needed on modern opengl machines
+            glfwWindowHint(GLFW_CONTEXT_DEBUG, GLFW_TRUE);
+        }
+
         glfwWindowHint(GLFW_SAMPLES, configuration.samples);
 
         _handle = glfwCreateWindow(configuration.width, configuration.height, configuration.name.data(), nullptr, nullptr);

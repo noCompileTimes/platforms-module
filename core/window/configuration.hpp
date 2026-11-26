@@ -12,5 +12,6 @@ namespace core::window
         int32_t height;
 
         int32_t samples;
+        int32_t debug;
     };
 }
